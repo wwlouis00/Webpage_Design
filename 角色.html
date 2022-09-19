@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>character</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="stylesheet" href="/css/import.css">
+  <!-- <link rel="stylesheet" href="/css/animate.min.css"> -->
+  <script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+  <script src="/js/jquery-cookie/jquery.cookie.js"></script>
+  <script src="/js/lib_TweenMax/TweenMax.min.js"></script>
+  <script src="/js/lib_slick/slick.min.js"></script>
+  <script src="/js/lib_colorbox/jquery.colorbox-min.js"></script>
+  <script src="/js/common/common.js"></script>
+  <script>
+    $('document').ready(function() {
+      var options = {
+        videoId: '2Nqgca3eNSg'
+      };
+      $('#youtube-movie').tubular(options);
+    });
+  </script>
+  <script src="/js/lib_tubular/jquery.tubular.1.0.js"></script>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    body{ font-family:arial;
+    padding: 10px;
+    background:purple;
+    }
+
+    .header{
+        padding: 30px;
+        text-align: center;
+        background: black;
+    }
+
+    header h1 {
+    font-size: 50px;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #FF0088;
+    text-align: center;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    
+    .leftcolumn {   
+    float: left;
+    width: 15%;
+    padding-right: 5px;
+    }  
+
+    .leftcolumn1 {   
+    float: left;
+    width: 10%;
+    background-color: purple;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    } 
+    
+    .leftcolumn2{
+    float: left;
+    width: 8.75%;
+    background-color: #f1f1f1;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    }
+
+    .rightcolumn {
+    float: left;
+    width: 15%;
+    padding-left: 5px;
+    }
+
+  
+
+    .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 50px;
+    }
+
+    .card {
+    background-color: white;
+    padding: 5px;
+    } 
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+
+    .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    }
+    
+    .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    }
+    
+    .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    }
+
+    .tablink:hover {
+    background-color: #777;
+    }
+
+    .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+    }
+
+    button:hover {
+    opacity: 0.8;
+    }
+
+    .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }
+
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    }
+
+    img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    }
+    .container {
+    padding: 16px;
+    }
+
+    .slideshow-container {
+     position: relative;
+     margin: 0;
+    }
+
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    } 
+
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+     background-color: rgba(0,0,0,0.8);
+    }
+    .text {
+     color: blue;
+     font-size: 100px;
+     padding: 16px 24px;
+     position: absolute;
+     bottom: 16px;
+     width: 100%;
+     text-align: center;
+    }
+
+    .numbertext {
+    color: blue;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+    
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: purple;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+
+
+    .fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+   @keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+    }
+
+   @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+   }
+   
+   .fa-facebook {
+   background: #3B5998;
+   color: white;
+   }
+
+   .fa-twitter {
+   background: #55ACEE;
+   color: white;
+   } 
+   
+   ul.breadcrumb {
+   list-style: none;
+   background-color:white;  
+   }
+
+  ul.breadcrumb li {display: inline;}
+
+  ul.breadcrumb li+li:before {
+  color: black;
+  content: "/\00a0";
+  }
+
+  ul.breadcrumb li a {color: black;}
+
+  .bnr {
+    position: absolute;
+    z-index: 300;
+    top: 3.7%;
+    right: 2.63%;
+    width: 25.6%;
+    height: auto;
+}
+
+
+.bnr.oro {
+    top: 16.4%;
+}
+
+.bnr.oro2 {
+    top: 29.4%;
+}
+
+.mv {
+    position: relative;
+}
+
+
+.news_tw {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 1rem 150px 1rem;
+}
+
+.inner {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#top #top_banner {
+    display: block !important;
+    padding: 40px 0;
+}
+
+#story {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    height: 645px;
+    text-align: center;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #dddb;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 網頁底層*/
+    .footer {
+    padding: 10px;
+    text-align: center;
+    background: black;
+    margin-top: 10px;
+    color: white
+    }
+
+    @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+    .topnav a {
+    float: none;
+    width: 100%;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    } 
+
+    .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    }
+
+    .icon-bar a:hover {
+    background-color: #000;
+    }
+
+    .active {
+    background-color: purple;
+    }
+    
+}
+        </style>
+</head>
+<body>
+    <div class="header">
+      <img src="img/logo_jojo_sp.png">
+          </div>
+  
+          <div class="topnav">
+            <a class="active" href="file:///C:/Users/wwlouis/Desktop/html/jojo%E6%9E%B6%E6%A7%8B%E7%B6%B2%E9%A0%81.html"><i class="fa fa-home"></i> HOME</a> 
+            <a href="file:///C:/Users/iot18/Desktop/html/w3c%E7%AF%84%E4%BE%8B%E7%A8%8B%E5%BC%8F.html" style="float:center"><i class="fa fa-globe"></i> NEWS</a>
+            <a href="file:///C:/Users/iot18/Desktop/html/%E6%9B%BF%E8%BA%AB.html" style="float:center"> STAND</a>
+            <a href="http://jojo-animation.com/staff/" style="float:center"> STAFF/CAST</a>
+            <a href="file:///C:/Users/iot18/Desktop/html/%E8%A7%92%E8%89%B2.html" style="float:center"><i class="fa fa-fw fa-user"></i> CHARACTER</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> STORY</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> MOVIE</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> MUSIC</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> GOODS</a>
+            <a href="http://jojo-animation.com/app/" style="float:center">APP</a>
+            <a href= "http://jojo-animation.com/special/" style="float:center">SPECIAL</a>
+            <a href="https://www.facebook.com/share.php?u=http%3A%2F%2Fjojo-animation.com"  style="float:center" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fjojo-animation.com&hashtags=jojo_anime&text=%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA%E3%80%80%E7%AC%AC5%E9%83%A8%E3%80%8C%E9%BB%84%E9%87%91%E3%81%AE%E9%A2%A8%E3%80%8D2018.10%20Blow%20you%20away%21%21%21&original_referer=http%3A%2F%2Fjojo-animation.com%2Fstory%2F" style="float:center" class="fa fa-twitter"></a>
+            
+    </div>
+
+    <div class="card">
+        <ul class="breadcrumb">
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%BD%B1%E8%A1%80%E8%84%88">Part1 ファントムブラッド</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E6%88%B0%E9%AC%A5%E6%BD%AE%E6%B5%81">Part2 戦闘潮流</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A1%B5%E9%AC%A5%E5%A3%AB">Part3 スターダストクルセイダース</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%8D%E6%BB%85%E9%91%BD%E7%9F%B3">Part4 ダイヤモンドは砕けない</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8">Part5 黄金の風</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E4%B9%8B%E6%B5%B7">Part6 ストーンオーシャン</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E9%A3%86%E9%A6%AC%E9%87%8E%E9%83%8E">Part7 スティール・ボール・ラン</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/JoJolion">Part8 ジョジョリオン</a></li>
+            <br>
+       </ul>
+      </div>
+      <marquee direction="left" style="color: yellow">進入JOJO正版官方網頁<a href="http://jojo-animation.com/" style="color: yellow">Part8 ジョジョリオン</a></marquee>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+              <li><a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%BD%B1%E8%A1%80%E8%84%88">Part1 ファントムブラッド</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E6%88%B0%E9%AC%A5%E6%BD%AE%E6%B5%81">Part2 戦闘潮流</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A1%B5%E9%AC%A5%E5%A3%AB">Part3 スターダストクルセイダース</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%8D%E6%BB%85%E9%91%BD%E7%9F%B3">Part4 ダイヤモンドは砕けない</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8">Part5 黄金の風</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E4%B9%8B%E6%B5%B7">Part6 ストーンオーシャン</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E9%A3%86%E9%A6%AC%E9%87%8E%E9%83%8E">Part7 スティール・ボール・ラン</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/JoJolion">Part8 ジョジョリオン</a></li>
+              <a href="https://search.gamer.com.tw/?q=JOJO"><img src="img/bahaLOGO.jpg" width=100% height=100%></a>  
+            </div>
+          </div>
+       <div class="leftcolumn1" >
+          <div class="card">
+              <a href="http://jojo-animation.com/character/01.php" class="op">   
+              <img src="img/bg_01.png" width=100% height=100%>
+              <img src="img/Giorno Giovanna.jpg" width=100% height=100%>
+              </a>
+          </div>
+  
+          <div class="card">
+              <a href="29.php" class="op">
+              <img src="img/bg_29.png" width=100% height=100%>
+              <img src="img/Diavolo.jpg" width=100% height=100%>
+            </a>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_16.png" width=100% height=100%>
+              <img src="img/Risotto Nero.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_30.png" width=100% height=100%>
+              <img src="img/Scolippi.jpg" width=100% height=100%>
+          </div>
+
+          <div class="card">
+            <img src="img/bg_14.png" width=100% height=100%>
+            <img src="img/Nunzio Pericolo.jpg" width=100% height=100%>
+        </div>
+       </div>
+  
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_02.png" width=100% height=100%>
+              <img src="img/Bruno Bucciarati.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_25.png" width=100% height=100%>
+              <img src="img/Vinegar Doppio.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_15.png" width=100% height=100%>
+              <img src="img/Formaggio.jpg" width=100% height=100%>
+          </div>
+  
+           <div class="card">
+              <img src="img/bg_07.png" width=100% height=100%>
+              <img src="img/Koichi Hirose.jpg" width=100% height=100%>
+          </div>
+       </div>
+  
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_13.png" width=100% height=100%>
+              <img src="img/Trish Una.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_22.png" width=100% height=100%>
+              <img src="img/TSqualo and Tiziano.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_17.png" width=100% height=100%>
+              <img src="img/Illuso.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_08.png" width=100% height=100%>
+              <img src="img/Jotaro Kujo.jpg" width=100% height=100%>
+          </div>
+       </div>
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_04.png" width=100% height=100%>
+              <img src="img/Guido Mista.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_24.png" width=100% height=100%>
+              <img src="img/Carne.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_18.png" width=100% height=100%>
+              <img src="img/Prosciutto.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_09.png" width=100% height=100%>
+              <img src="img/Luca.jpg" width=100% height=100%>
+          </div>
+       </div>
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_05.png" width=100% height=100%>
+              <img src="img/Narancia Ghirga.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_26.png" width=100% height=100%>
+              <img src="img/Cioccolata.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_19.png" width=100% height=100%>
+              <img src="img/Pesci.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_10.png" width=100% height=100%>
+              <img src="img/Polpo.jpg" width=100% height=100%>
+          </div>
+       </div>
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_03.png" width=100% height=100%>
+              <img src="img/Leone Abbacchio.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_27.png" width=100% height=100%>
+              <img src="img/Secco.jpg" width=100% height=100%>
+
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_20.png" width=100% height=100%>
+              <img src="img/Melone.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_11.png" width=100% height=100%>
+              <img src="img/Mario Zucchero.jpg" width=100% height=100%>
+          </div>
+       </div>
+  
+       <div class="leftcolumn1">
+          <div class="card">
+              <img src="img/bg_06.png" width=100% height=100%>
+              <img src="img/Pannacotta Fugo.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_28.png" width=100% height=100%>
+              <img src="img/Jean Pierre Polnareff.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_21.png" width=100% height=100%>
+              <img src="img/Ghiaccio.jpg" width=100% height=100%>
+          </div>
+  
+          <div class="card">
+              <img src="img/bg_12.png" width=100% height=100%>
+              <img src="img/Sale.jpg" width=100% height=100%>
+          </div>
+       </div>
+
+       <div class="rightcolumn">
+        <div class="card">
+          <h2>ANIME</h2>
+          <a href="https://ani.gamer.com.tw/animeVideo.php?sn=12698" style="float:center"><img src="img/動畫瘋.jpg"></a>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+      </div>
+  
+  
+  
+    </div>
+            
+          
+          
+            <div class="pagetop"><a href="#" class="jump"><img src="/img/totop.png" alt=""></a></div>
+            
+          <div class="footer">
+            <h3>© copyright w3schools.com by 王維澤</h3>
+          </div>
+    
+
+
+
+              <script>
+                  function openCity(cityName,elmnt,color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                      tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                      tablinks[i].style.backgroundColor = "";
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+                  
+                  }
+                  // Get the element with id="defaultOpen" and click on it
+                  document.getElementById("defaultOpen").click();
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+
+                  function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                  }
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+                  </script>
+
+   
+</body>
+</html>

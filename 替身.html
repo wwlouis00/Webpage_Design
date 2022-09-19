@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STAND</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <link rel="stylesheet" href="/css/import.css">
+  <!-- <link rel="stylesheet" href="/css/animate.min.css"> -->
+  <script src="/js/jQuery/jquery-2.2.4.min.js"></script>
+  <script src="/js/jquery-cookie/jquery.cookie.js"></script>
+  <script src="/js/lib_TweenMax/TweenMax.min.js"></script>
+  <script src="/js/lib_slick/slick.min.js"></script>
+  <script src="/js/lib_colorbox/jquery.colorbox-min.js"></script>
+  <script src="/js/common/common.js"></script>
+  <script>
+    $('document').ready(function() {
+      var options = {
+        videoId: '2Nqgca3eNSg'
+      };
+      $('#youtube-movie').tubular(options);
+    });
+  </script>
+  <script src="/js/lib_tubular/jquery.tubular.1.0.js"></script>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    
+    body{ font-family:arial;
+    padding: 10px;
+    background: purple;
+    }
+
+    .header{
+        padding: 30px;
+        text-align: center;
+        background: black;
+    }
+
+    header h1 {
+    font-size: 50px;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color:#FF0088;
+    text-align: center;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    
+    .leftcolumn {   
+    float: left;
+    width: 15%;
+    padding-right: 5px;
+    }  
+
+    .leftcolumn1 {   
+    float: left;
+    width: 7%;
+    background-color: #f1f1f1;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    } 
+    
+    .leftcolumn3{
+    float: left;                                                                                    
+    width: 15%;
+    background-color: #f1f1f1;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    }
+
+    .leftcolumn2{
+    float: left;
+    width: 70%;
+    background-color: #f1f1f1;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    }
+
+    .leftcolumn4{
+    float: left;
+    width: 20%;
+    background-color: #f1f1f1;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    }
+
+    .rightcolumn {
+    float: right;
+    width: 15%;
+    padding-left: 5px;
+    }
+
+  
+
+    .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 50px;
+    }
+
+    .card {
+    background-color: white;
+    padding: 5px;
+    } 
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+
+    .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    }
+    
+    .side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    }
+    
+    .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    }
+
+    .tablink:hover {
+    background-color: #777;
+    }
+
+    .tabcontent {
+    color: white;
+    display: none;
+    padding: 1px;
+    text-align: center;
+    }
+
+    button:hover {
+    opacity: 0.8;
+    }
+
+    .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    }
+
+    .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    }
+
+    img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    }
+    .container {
+    padding: 16px;
+    }
+
+    .slideshow-container {
+     position: relative;
+     margin: 0;
+    }
+
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    } 
+
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+     background-color: rgba(0,0,0,0.8);
+    }
+    .text {
+     color: blue;
+     font-size: 100px;
+     padding: 16px 24px;
+     position: absolute;
+     bottom: 16px;
+     width: 100%;
+     text-align: center;
+    }
+
+    .numbertext {
+    color: blue;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+    
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: purple;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+
+
+    .fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+   @keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+    }
+
+   @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+   }
+   
+   .fa-facebook {
+   background: #3B5998;
+   color: white;
+   }
+
+   .fa-twitter {
+   background: #55ACEE;
+   color: white;
+   } 
+   
+   ul.breadcrumb {
+   list-style: none;
+   background-color: white;  
+   }
+
+  ul.breadcrumb li {display: inline;}
+
+  ul.breadcrumb li+li:before {
+  color: black;
+  content: "/\00a0";
+  }
+
+  ul.breadcrumb li a {color: black;}
+
+  .bnr {
+    position: absolute;
+    z-index: 300;
+    top: 3.7%;
+    right: 2.63%;
+    width: 25.6%;
+    height: auto;
+}
+
+
+.bnr.oro {
+    top: 16.4%;
+}
+
+.bnr.oro2 {
+    top: 29.4%;
+}
+
+.mv {
+    position: relative;
+}
+
+
+.news_tw {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 1rem 150px 1rem;
+}
+
+ul.chara_list {
+    max-width: 1024px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#top #top_banner {
+    display: block !important;
+    padding: 40px 0;
+}
+
+#story {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    height: 645px;
+    text-align: center;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 能力顯現值 */
+
+
+
+.skills {
+  text-align: right;
+  color: white;
+}
+.破壞力 {background-color: #f44336;}
+.速度 {background-color: yellow;}
+.射程距離 {background-color: orange;}
+.持續力 {background-color: purple;}
+.動作精密性 {background-color: #2196F3;}
+.成長性 {background-color: greenyellow;}
+.無 {background-color: black;}
+
+/* 翻轉卡片 */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+.tab {
+  float: left;
+  background-color: black;
+  width: 15%;
+  height: 350px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color:yellow;
+  padding: 20px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:purple;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #FF0088;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding:1px;
+  width: 80%;
+  border-left: none;
+  display: none;
+  color: black;
+  text-align: left;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 網頁底層*/
+  .footer {
+    position: fixed;
+    padding: 10px;
+    text-align: center;
+    background: black;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    }
+
+    @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+    .topnav a {
+    float: none;
+    width: 100%;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    } 
+
+    .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    }
+
+    .icon-bar a:hover {
+    background-color: #000;
+    }
+
+    .active {
+    background-color: purple;
+    }
+    
+}
+        </style>
+</head>
+<body>
+    <div class="header">
+      <img src="img/logo_jojo_sp.png">
+          </div>
+  
+          <div class="topnav">
+            <a class="active" href="file:///C:/Users/iot18/Desktop/html/jojo%E6%9E%B6%E6%A7%8B%E7%B6%B2%E9%A0%81.html"><i class="fa fa-home"></i> HOME</a> 
+            <a href="file:///C:/Users/iot18/Desktop/html/w3c%E7%AF%84%E4%BE%8B%E7%A8%8B%E5%BC%8F.html" style="float:center"><i class="fa fa-globe"></i> NEWS</a>
+            <a href="file:///C:/Users/iot18/Desktop/html/%E6%9B%BF%E8%BA%AB.html" style="float:center"> STAND</a>
+            <a href="http://jojo-animation.com/staff/" style="float:center"> STAFF/CAST</a>
+            <a href="file:///C:/Users/iot18/Desktop/html/%E8%A7%92%E8%89%B2.html" style="float:center"><i class="fa fa-fw fa-user"></i> CHARACTER</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> STORY</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> MOVIE</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> MUSIC</a>
+            <a href="http://jojo-animation.com/story/" style="float:center"> GOODS</a>
+            <a href="http://jojo-animation.com/app/" style="float:center">APP</a>
+            <a href= "http://jojo-animation.com/special/" style="float:center">SPECIAL</a>
+            <a href="https://www.facebook.com/share.php?u=http%3A%2F%2Fjojo-animation.com"  style="float:center" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fjojo-animation.com&hashtags=jojo_anime&text=%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA%E3%80%80%E7%AC%AC5%E9%83%A8%E3%80%8C%E9%BB%84%E9%87%91%E3%81%AE%E9%A2%A8%E3%80%8D2018.10%20Blow%20you%20away%21%21%21&original_referer=http%3A%2F%2Fjojo-animation.com%2Fstory%2F" style="float:center" class="fa fa-twitter"></a>
+    </div>
+
+    <div class="card">
+        <ul class="breadcrumb">
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%BD%B1%E8%A1%80%E8%84%88">Part1 ファントムブラッド</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E6%88%B0%E9%AC%A5%E6%BD%AE%E6%B5%81">Part2 戦闘潮流</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A1%B5%E9%AC%A5%E5%A3%AB">Part3 スターダストクルセイダース</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%8D%E6%BB%85%E9%91%BD%E7%9F%B3">Part4 ダイヤモンドは砕けない</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8">Part5 黄金の風</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E4%B9%8B%E6%B5%B7">Part6 ストーンオーシャン</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E9%A3%86%E9%A6%AC%E9%87%8E%E9%83%8E">Part7 スティール・ボール・ラン</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/JoJolion">Part8 ジョジョリオン</a></li>
+            <br>
+       </ul>
+      </div>
+      <marquee direction="left" style="color: yellow">進入JOJO正版官方網頁<a href="http://jojo-animation.com/"  style="color: yellow">Part8 ジョジョリオン</a></marquee>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+              <li><a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%BD%B1%E8%A1%80%E8%84%88">Part1 ファントムブラッド</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E6%88%B0%E9%AC%A5%E6%BD%AE%E6%B5%81">Part2 戦闘潮流</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A1%B5%E9%AC%A5%E5%A3%AB">Part3 スターダストクルセイダース</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E4%B8%8D%E6%BB%85%E9%91%BD%E7%9F%B3">Part4 ダイヤモンドは砕けない</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8">Part5 黄金の風</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E4%B9%8B%E6%B5%B7">Part6 ストーンオーシャン</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/%E9%A3%86%E9%A6%AC%E9%87%8E%E9%83%8E">Part7 スティール・ボール・ラン</a></li>
+              <li><a href="https://zh.wikipedia.org/wiki/JoJolion">Part8 ジョジョリオン</a></li>
+              <a href="https://search.gamer.com.tw/?q=JOJO"><img src="img/bahaLOGO.jpg" width=100% height=100%></a>  
+            </div>
+          </div>
+      
+       <div class="leftcolumn2">
+
+          <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, '黃金體驗')">Gold Experience</button>
+            <button class="tablinks" onmouseover="openCity(event, '鋼鍊手指')">Sticky Fingers</button>
+            <button class="tablinks" onmouseover="openCity(event, '憂鬱藍調')">Moody Blues</button>
+            <button class="tablinks" onmouseover="openCity(event, '性感手槍')">Sex Pistols</button>
+            <button class="tablinks" onmouseover="openCity(event, '史密斯飛船')">Aerosmith</button>
+            <button class="tablinks" onmouseover="openCity(event, '紫煙')">Purple Haze</button>
+            <button class="tablinks" onmouseover="openCity(event, '辣妹')">Spice Girl</button>
+            <button class="tablinks" onmouseover="openCity(event, '烏龜')">Coco Jumbo</button>
+            <button class="tablinks" onmouseover="openCity(event, '黑色安息日')">Black Sabbath</button>
+            <button class="tablinks" onmouseover="openCity(event, '柔軟機器')">Soft Machine</button>
+            <button class="tablinks" onmouseover="openCity(event, '手藝工作')">Kraft Work</button>
+            <button class="tablinks" onmouseover="openCity(event, '小腳')">Little Feet</button>
+            <button class="tablinks" onmouseover="openCity(event, '鏡中人')">Man In The Mirror</button>
+            <button class="tablinks" onmouseover="openCity(event, '壯烈成仁')">The Grateful Dead</button>
+            <button class="tablinks" onmouseover="openCity(event, '海灘男孩')">Beach Boy</button>
+            <button class="tablinks" onmouseover="openCity(event, '娃娃臉')">Baby Face</button>
+            <button class="tablinks" onmouseover="openCity(event, '白色相簿')">White Album</button>
+            <button class="tablinks" onmouseover="openCity(event, '克里姆王')">King Crimson</button>
+            <button class="tablinks" onmouseover="openCity(event, 'CRASH and 臉部特寫')">CRASH and Talking Head</button>
+            <button class="tablinks" onmouseover="openCity(event, '惡名昭彰')">Notorious B.I.G.</button>
+            <button class="tablinks" onmouseover="openCity(event, '金屬製品')">Metallica</button>
+            <button class="tablinks" onmouseover="openCity(event, '青春歲月')">Green Day</button>
+            <button class="tablinks" onmouseover="openCity(event, '綠洲')">Oasis</button>
+            <button class="tablinks" onmouseover="openCity(event, '銀色戰車鎮魂曲')">Silver Chariots Requiem</button>
+            <button class="tablinks" onmouseover="openCity(event, '黃金體驗鎮魂曲')">Gold Experience Requiem</button>
+            <button class="tablinks" onmouseover="openCity(event, '滾石')">Rolling Stone</button>
+          </div>
+         
+
+          <div id="黃金體驗" class="tabcontent">
+              <div class="card">
+                <img src="img/bg_01.png" width="155" height="285"> 
+                <img src="img/黃金體驗.jpg" width="185" height="285">
+              <h3>喬魯諾·喬巴拿（ジョルノ・ジョバァーナ，Giorno Giovanna）</h>
+                <p>本作主角。第五部的JOJO（GIOGIO），是喬斯達家的宿敵——DIO和日本女性所生之子。15歳。因為DIO自頭部以下是喬納森·喬斯達的身體，所以同時擁有DIO和喬斯達家族的基因，頸部也有星形胎記，但沒有繼承吸血鬼的血統。原本的髮色是黑色，而在長大後某日突然變成和DIO一樣的金色。其個性冷靜、正直且機靈，具有豐富的科學知識及洞察力，且擅長扒手及將耳朵塞入耳孔中的技巧。
+                    本名為汐華初流乃（しおばな はるの，Shiobana Haruno），因為母親和義大利人再婚才將名字改為喬魯諾·喬巴拿。4歲時常常受到繼父的虐待，還被鎮上的其他孩子欺負，而為此有著陰沉的個性，以及對人類衍生出了不信任感。某一天救了一位被人追殺的流氓（此時其替身能力已覺醒），使他的生活和心境有所改變，並立志要成為「流氓巨星」。故事一開始是在機場外開車兼差，之後決定加入「熱情」並與布加拉提合作，但因謀殺了幹部波爾波而讓組織內部引起了動盪。故事最後成為了「熱情」的新任首領。
+                    戰鬥時會喊出跟DIO一樣的「沒用沒用沒用沒用......！（無駄無駄無駄無駄......！）」及「WRYYYYYYYY…（ウリャーーー......）」喬魯諾在義大利語中的意思是陽光，象徵物是瓢蟲。</p>                   
+              <h3>黃金體驗</h>
+                <p>人型的近距離力量型替身，但本身的破壞力不高。能賦與被打的物品「生命」、使其變成地球上的動物或植物。能變化的生物以喬魯諾認識、理解的生物為限。喬魯諾能感知用此能力製造出的生物之位置。若敵人攻擊其生物則會將攻擊（或能力產生的效果）反彈回去，但該設定僅於故事初期出現。
+                         若打到人類的身體，則會向對方灌注生命能量，使對方的意識暴衝數秒而無法控制自己的肉體，感覺也會因此被放大數倍而使受到的傷害的痛感加強。
+                         以此能力化成的生物，能以喬魯諾本人的意思成長或死去。在與「娃娃臉」對戰的過程中領悟了能將物品變成人體器官來填補傷口的治療手段，但治療過程中疼痛感不會消失。
+                         名稱的由來是美國音樂家王子於1995年的專輯《The Gold Experience》。</p>
+              <p>破壞力</p>
+               <div class="skills 破壞力" style="width: 50%">C</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E(2m)</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 30%">D</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 50%">C</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 90%">A</div>
+              </div>
+          </div>
+
+          <div id="鋼鍊手指" class="tabcontent">
+              <div class="card">
+                  <img src="img/bg_02.png" width="155" height="285">
+                  <img src="img/鋼鍊手指.jpg" width="185" height="285"> 
+                <h3>布魯諾·布加拉提（ブローノ・ブチャラティ，Bruno Bucciarati）</h>
+                  <p>布加拉提小隊的首領，波爾波的部下。20歲。能透過舔別人的汗水來判斷他人有沒有說謊。對組織很忠誠，對自己的部下也很嚴格。實際上是個溫柔的人，有時甚至會將他人的順位放在自己之前採取行動。因為這樣的關係，在城市裡的人望甚高。
+                      小時候雙親離婚，自己和爸爸留在漁村內生活。在布加拉提12歲的時候，父親因為無意間目擊了毒品的交易現場而身受重傷。比同齡小孩聰慧許多的布加拉提，得知會有殺手為了封口而來殺死父親。因此躲在病房內將殺手殺死。為了逃過黑手黨的報復而對現在的組織宣示忠誠（父親在五年後因為後遺症而死去）。但他所屬的組織也開始進行毒品交易，因此對組織抱持著疑問。初登場時作為組織派出的刺客和喬魯諾相遇，贊同他的夢想並將其納入小隊。
+                      在故事中期，護衛特莉休到老闆的所在地，知道了老闆的真意是要殺害特莉休，認為老闆再次背叛了自己的心因此憤怒的背叛組織。在和老闆的戰鬥中身負致命傷，但因喬魯諾的「黃金體驗」的能力使得自身靈魂昇華再加上自身的意志力而迴光返照得以再行動，雖然靈魂還在肉體內但實際上肉體早已死去。
+                      最終決戰時，因自知自身的肉體早已死去靈魂無法再回歸肉體，因此從老闆的手中保護了「箭」並託付給喬魯諾，向他述說感謝後昇天離去。
+                      戰鬥時會喊「阿哩阿哩阿哩……Arrivederci（再會了）！」
+                      其姓氏「Bucciarati」是庫奇達餅（西西里無花果餅乾）的別稱之一。</p>                   
+                <h3>鋼鏈手指（スティッキィ・フィンガーズ，Sticky Fingers）</h>
+                      <p>在身體上有著和布加拉提的服裝一樣的拉鏈的人型替身。能在被打的物體（包括空氣和生物）上加上拉鏈，進而接上或分離。可以利用能力躲藏、增加身體的延展距離或當作口袋收納物品等。
+                    名稱的由來是英國搖滾樂隊滾石樂隊於1971年的專輯《Sticky Fingers》。</p>
+                <p>破壞力</p>
+                <div class="skills 破壞力" style="width: 90%">A</div>
+                
+                <p>速度</p>
+                  <div class="skills 速度" style="width: 90%">A</div>
+                
+                <p>射程距離</p>
+                  <div class="skills 射程距離" style="width: 10%">E(2m)</div>>
+                
+                <p>持續力</p>
+                  <div class="skills 持續力" style="width: 30%">D</div>
+  
+                <p>動作精密性</p>
+                  <div class="skills 動作精密性" style="width: 50%">C</div>
+  
+                <p>成長性</p>
+                  <div class="skills 成長性" style="width: 30%">D</div>
+                </div>
+          </div>
+
+          <div id="憂鬱藍調" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_03.png" width="155" height="285"> 
+                <img src="img/憂鬱藍調.jpg" width="185" height="285">
+              <h3>雷奧·阿帕基（レオーネ・アバッキオ，Leone Abbacchio）</h>
+                <p>布加拉提的部下，21歲。原本是個正義感強烈的警察，對因為利益放跑惡人的社會失望、自己也開始收受賄賂。因為自己的污職而導致同事的殉職。身心都墮落於黑暗，成為黑手黨。
+                  是不太相信別人的性格。但是一旦相信他人就會是完全的信賴。在和喬魯諾共同行動的時候認同他的覺悟，最後完全接受他。
+                  在故事中期，尋找老闆的時候被老闆以托比歐的模樣接近殺害。用盡最後的力氣將老闆的長相及指紋刻在石碑上，跟著當初殉職的警察同事一同離去。
+                  其名字「Leone」和姓氏「Abbacchio」分別為獅子和羊肉的義大利語。</p>
+                  <h3>憂鬱藍調（ムーディー・ブルース，Moody Blues）</h>    
+                <p>人型的替身。可以將特定人物或替身的行動如同影片般的播放。雖然可以完美的再現對方的樣貌，但無法再現會瞬間移動的替身。
+                  可以用播放中的人物的樣子欺騙敵人，但弱點是會處於無法攻擊或防禦的無防備狀態。
+                  在故事中多是擔任負責追蹤的角色，不是戰鬥型的替身，但作者表示阿帕基是小隊中打架最強的。
+                  名稱的由來是英國搖滾樂隊憂鬱藍調合唱團。</p>                     
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 50%">C</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 90%">A</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 50%">C</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="性感手槍" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_04.png" width="155" height="285"> 
+                <img src="img/性感手槍.jpg" width="185" height="285"> 
+              <h3>葛德·米斯達（グイード・ミスタ，Guido Mista）</h>
+                <p>18歲。過去在和對女性施暴的小混混對峙時，精確射殺對方全員。其行為雖屬正當防衛，但仍遭判刑。讀過判決紀錄後的布加拉提將米斯達釋放，讓他接受試驗並加入組織。
+                  人生信條是「單純的活著」，個性活潑直率。是除了布加拉提之外小隊中最先接受喬魯諾的人。認為4是不祥的數字。
+                  在最終決戰中存活到最後，之後成為了喬魯諾的左右手。
+                  其姓氏「Mista」是取自義大利語的混和沙拉（Insalata Mista）一詞。</p>
+                  <h3>性感手槍（セックス・ピストルズ，Sex Pistols）</h>    
+                    <p>由六個小人組成的替身，每個負責一枚左輪手槍的子彈，可以騎在子彈上改變方向，或用踢擊迅速的改變軌道。
+                      6人小隊，每人都有自我意識。No.1是隊長、No.2是個吊兒郎當的傢伙、No.3很容易生氣、No.5是膽小的愛哭鬼、No.6冷酷且冷靜、No.7則是副隊長（在No.1不在時負責指揮）。因為米斯達自身的堅持所以沒有No.4。
+                      和本體的米斯達常有互動，有時會離開米斯達去支援喬魯諾等人，具有遠距操作和自動操作的特性。如果被用「隻」稱呼會不高興，雖然是替身但卻有著義大利人的生活習慣、也會吃飯和睡午覺。
+                      替身們重傷的話，米斯達身上會出現彈孔般的傷口
+                      名稱的由來是英國龐克搖滾樂隊性手槍。</p>                   
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 10%">E</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 100%">?</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 90%">A</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 70%">B</div>
+              </div>
+          </div>
+
+          <div id="史密斯飛船" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_05.png" width="155" height="285"> 
+                <img src="img/史密斯飛船.jpg" width="185" height="285">
+              <h3>納蘭迦·吉爾各（ナランチャ・ギルガ，Narancia Ghirga）</h>
+                <p>布加拉提的部下，17歲。母親早逝，沒有受到父親的疼愛。被信任的友人背叛而被送入少年收容所，出所後患上眼疾，背叛他的友人散播關於眼疾的謠言因此受到大眾的排擠、對於人生感到絕望。在此時被福葛帶回布加拉提小隊後受到治療而痊癒。之後想要成為黑手黨卻被布加拉提斥責並送回家。對於「對著沒有關係的我，卻用比父母還認真的態度生氣」的布加拉提抱有憧憬，為了報答他的恩情祕密的接受試驗，加入了組織。
+                  因為沒受過正規的教育而抱有自卑感，常因為沒有知識而被愚弄，一旦生氣就會揮舞小刀。因為比喬魯諾大兩歲而擺出前輩的態度，在內心認同他。
+                  活到了最終決戰，決定戰後如果活下來就要回到故鄉並去學校上學，卻在「克里姆王」消去時間的世界中被老闆穿刺到鐵柵欄上殺害。
+                  戰鬥時會喊「波拉波拉波拉……Volare via（飛吧）！」
+                  其名字「Narancia」是將柳橙的義大利語「Arancia」前加上N組成。</p>                   
+                  <h3>史密斯飛船（エアロスミス，Aerosmith）</h>    
+                    <p>螺旋槳戰鬥機型的替身，能探測生物呼出的二氧化碳並加以攻擊。
+                      就算納蘭迦本人不在，只要是替身在的地方都可以用雷達探測。通常並不是用於攻擊而是偵查。
+                      子彈命中的話，能用子彈發出的硝煙追蹤敵人。
+                      名稱的由來是美國搖滾樂隊史密斯飛船。</p> 
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 70%">B</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 70%">B</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 100%">數十公尺</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 50%">C</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="紫煙" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_06.png" width="155" height="285"> 
+                <img src="img/紫煙.jpg" width="185" height="285">
+              <h3>潘納科達·福葛（パンナコッタ・フーゴ，Pannacotta Fugo）</h>
+                <p>布加拉提的部下，1985年出生，16歲。IQ152，家裡用錢替他買到了跳級唸大學的資格。雖然平常表現紳士，但是個性沉不住氣、容易發怒。對教師的暴力行為讓他從此走偏了路，加入了黑手黨。曾把在街上流浪的納蘭迦帶回小隊。在小隊中負責納蘭迦的教育工作。
+                    因為替身有把夥伴甚至自己都捲入的危險，在本篇故事中只戰鬥過一次。
+                    故事中期，對於背叛組織的布加拉提，主張「只靠理想是無法在這個世界存活的」，獨自脫離小隊。
+                    官方外傳小說《不知恥的紫煙》的主角。
+                    其名字「Pannacotta」取自義式奶酪（Panna cotta），姓氏「Fugo」則是義大利語的「解除、退散」之意。
+                    其姓氏「Bucciarati」是庫奇達餅（西西里無花果餅乾）的別稱之一。</p>                   
+                    <h3>紫煙（パープル・ヘイズ，Purple Haze）</h>    
+                      <p>性格凶暴的人型替身，連本體也難以控制，能以拳頭上的膠囊釋放病毒，沒有抗體的生物會在感染病毒的30秒內全身腐敗而死，即使本體也無法倖免。病毒在陽光下數十秒就會被殺菌消毒。
+                        名稱的由來是美國吉他手吉米·罕醉克斯的歌曲Purple Haze。</p> 
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 70%">B</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 10%">E</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 70%">B</div>
+              </div>
+          </div>
+
+          <div id="辣妹" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_13.png" width="155" height="285"> 
+                <img src="img/辣妹.jpg" width="185" height="285">
+              <h3>特莉休·烏納（トリッシュ・ウナ，Trish Una）</h>
+                <p>組織老闆的女兒。15歲。是布加拉提小隊保護的對象，並非成員。
+                  是老闆在創立組織前生下的孩子。老闆一直到最近才知道她的存在。在這之前和母親多娜提拉兩人生活，依照母親病死之前的遺言開始尋找父親（老闆），偶然被老闆發現了她的存在。被認為是知道老闆真實身分的關鍵，捲入了組織內部的紛爭，依老闆的指示被貝利可羅保護著，並交由布加拉提小隊護衛。
+                  初期有些許潔癖並且態度高傲，但跟著布加拉提小隊使她成長了，也使得個性變得溫和許多。
+                  其名字取自美國模特特莉許·高夫，姓氏「Una」則是義大利語的「一個」的意思。</p>                   
+                  <h3>辣妹（スパイス・ガール，Spice Girl）</h>    
+                    <p>可以將任何物質變得柔軟，擁有自我意識的女性型替身。外表酷似老闆的「克里姆王」。軟化的範圍從變得像橡膠般有彈性到不定形的程度，可以自由控制。也可以軟化自己的身體來減輕槍械的傷害。時鐘之類的機械要是被軟化了也能持續機能。
+                      和特莉休接近對等的友人關係。平常雖然會用敬語，但戰鬥時則會顯露出不輸本體的強硬個性。
+                      戰鬥時會喊「WANNABEEEE——！」，取自於辣妹合唱團於1996年的歌曲〈Wannabe〉。
+                      名稱的由來是英國的辣妹合唱團。</p>       
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 70%">B</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 30%">D</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="烏龜" class="tabcontent">
+            <div class="card"> 
+                <img src="img/烏龜.jpg" width="256" height="394">
+              <h3>烏龜（ココ・ジャンボ，Coco Jumbo）</h>
+                <p>在啟動替身後，其他人可以進入烏龜內的特殊空間。該空間寬敞、舒適，有沙發、冰箱、網際網路等設備。是良好的庇護所。
+                  名稱由來是德國的歐陸舞曲樂團Mr.President。</p>                   
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 10%">E</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 10%">E</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="黑色安息日" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_10.png" width="260" height="285"> 
+                <img src="img/辣妹.jpg" width="185" height="285">
+              <h3>波爾波（ポルポ，Polpo）</h>
+                <p>體型巨大的大漢，表面上是被關在監獄裡、但實際上是住在裡頭，對警察和獄卒都有巨大的影響力。負責審核組織的新入成員。
+                  曾對喬魯諾表示黑道之間最重要的是「信任」，最忌諱的是「侮辱」。
+                  在組織中直接接受老闆的命令，並負責「與替身使者有關」的任務。
+                  其替身因殺了喬魯諾學校裡的清潔工，替身被喬魯諾與廣瀨康一擊敗後，遭到審核通過的喬魯諾設計而飲彈自盡。
+                  其名字是義大利語的章魚。</p>
+                  <h3>黑色安息日（ブラック・サバス，Black Sabbath）</h>
+                    <p>人型，遠距離自動操縱型替身，只能在影子之間移動，可在影子交會時移動。會從口中射出『箭』，射穿對手靈魂引出替身能力，若無法適應則直接死亡。
+                      名稱的由來是英國搖滾樂團黑色安息日。</p>                       
+                    <img src="img/烏龜.jpg" width="256" height="394">
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 10%">E</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 90%">A</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="柔軟機器" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_11.png" width="260" height="285"> 
+                <img src="img/柔軟機器.jpg" width="155" height="285">
+
+              <h3>馬利歐·茲凱羅（マリオ・ズッケェロ，Mario Zucchero）</h>
+                <p>想成為組織的幹部而盯上波爾波的遺產，和沙雷一起狙擊布加拉提等人。被布加拉提打倒。
+                  其姓氏取自義大利搖滾創作歌手蘇奇洛·福爾納查理，同時也是義大利語的糖。</p>                   
+                  <h3>柔軟機器（ソフト・マシーン，Soft Machine）</h>
+                    <p>人型，可將目標用針刺傷，目標會像氣球洩氣般壓扁，並失去意識和行動能力。
+                      名稱由來是英國音樂團體Soft Machine。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 30%">D</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="手藝工作" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_12.png" width="260" height="285"> 
+                <img src="img/手藝工作.jpg" width="185" height="285">
+              <h3>沙雷（サーレー，Sale）</h>
+                <p>想成為組織的幹部而盯上波爾波的遺產，和茲凱羅一起狙擊布加拉提等人。被米斯達打倒。
+                  其名字是義大利語的鹽巴。</p>
+                  <h3>手藝工作（クラフト・ワーク，Kraft Work）</h>
+                    <p>人型，可以在一瞬間將物體固定在自己想要的位置，數量不限。
+                      名稱由來是德國樂團發電廠樂團。</p>    
+>
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 50%">C</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="小腳" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_15.png" width="155" height="285">                
+                <img src="img/小腳.jpg" width="185" height="285">
+              <h3>波爾馬吉歐（ホルマジオ，Formaggio）</h>
+                <p>暗殺小隊成員，口頭禪「真沒辦法啊」。襲擊出外採買的納蘭迦，逼問出小隊藏身的地點。
+                  對自己的替身能力能用最大限度活用。從納蘭迦的行動推敲出「史密斯飛船」的能力，算是個謀略家。
+                  被生氣的納蘭迦不顧情況的激烈攻擊因而敗北，死前留下了嘲諷的話。
+                  其名字取自起司的義大利語。</p>
+                  <h3>小腳（リトル・フィート，Little Feet）</h>
+                    <p>人形替身。可以將被自己食指的刀劃傷的對象不斷縮小。一旦被施加能力的對象不管逃到哪裡，都會無限的被縮小。
+                      能力解除的話會瞬間恢復到原本的大小。另外，可以自由地將自己瞬間縮小。
+                      名稱的由來是美國的搖滾樂團Little Feet。</p>                     
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 30%">D</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 70%">B</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 30%">D</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="鏡中人" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_17.png" width="155" height="285"> 
+                <img src="img/鏡中人.jpg" width="185" height="285">
+              <h3>伊魯索（イルーゾォ，Illuso）</h>
+                <p>暗殺小隊成員。個性不強勢、容易動搖，但具有將「紫煙」的能力看穿的判斷力及很強的警戒心。
+                  在龐貝遺跡等待著喬魯諾等人，一個一個的襲擊小隊成員，將對方引到鏡中。但由於喬魯諾感染了「紫煙」的病毒進入鏡中，而使自己也感染了病毒。將感染病毒的手腕切除來到鏡子外，卻因為感染現實世界的「紫煙」的病毒而病死。
+                  其名字為義大利語的「幻想」之意。</p>                   
+                  <h3>鏡中人（マン・イン・ザ・ミラー，Man In The Mirror）</h>
+                    <p>戴著風鏡的人型替身。可以做出「鏡中世界」，以鏡子為出入口進出其中。在鏡中世界移動到別的地方再出來也是可以辦到的。
+                      通常看著鏡子並不會看到伊魯索的身影，所以無法追蹤。讓目標看見鏡中的伊魯索，「看見伊魯索的身影」、「使其映在鏡子中」滿足這兩個條件便可以將其拉入鏡中世界。在鏡中世界除了伊魯索外的人不能移動物品。鏡外世界如果有什麼變化，鏡中世界也會連動發生變化。
+                      只有伊魯索「許可」的對象才可以進入鏡中世界。對有替身能力的人，一般只會許可本體進入，所以沒得到許可的替身將會留在鏡外。
+                      名稱的由來是流行音樂天王麥可·傑克森的歌曲鏡中人</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 30%">D</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 30%">D</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 50%">C</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="壯烈成仁" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_18.png" width="155" height="285">        
+                <img src="img/壯烈成仁.jpg" width="185" height="285">
+              <h3>壯烈成仁（ザ・グレイトフル・デッド，The Grateful Dead）</h>
+                <p>暗殺小隊成員。有著為了達成目的不會有一絲迷惑的覺悟，對無辜的人們也能毫不猶豫的將其捲入替身攻擊中。
+                  與剛進暗殺小隊的新人貝西搭檔，時而斥責、時而鼓勵貝西，讓他的精神面有相當大的成長。他被貝西稱為「大哥」，是很會照顧人的性格。
+                  在列車上襲擊布加拉提小隊，老化了所有乘客。在和布加拉提戰鬥的最後，摔出車外卡在列車的底部。即使受到瀕死的重傷依然沒有解除替身能力。貝西在見到他的「覺悟」後有所成長。最後傷重身亡。
+                  在單行本的替身介紹內，本體名稱記載的是「普羅修特大哥」。普羅修特是義大利語的火腿。</p>                   
+                  <h3>壯烈成仁（ザ・グレイトフル・デッド，The Grateful Dead）</h>
+                    <p>全身布滿眼睛，接近人型但沒有下肢，用像腳一樣粗的兩隻手臂行走的替身。會釋放將周遭的生物無差別老化的氣體。對體溫較低的對象老化速度會變慢。直接碰觸對象則可瞬間將其老化。本體可以自由的解除老化。
+                      因為老化能力不分敵我，所以同伴也必須用冰保持體溫低下。
+                      名稱的由來是美國搖滾樂隊感恩至死。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 70%">B</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 10%">E</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="海灘男孩" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_19.png" width="155" height="285"> 
+                
+              <h3>貝西（ペッシ，Pesci）</h>
+                <p>暗殺小隊的成員。作為普羅修特的小弟和他一同行動。因為是新人所以從來沒有殺過人。常常被普羅修特斥責精神面的懦弱。
+                  原本很膽小且沒有自信。在目睹普羅修特即使瀕死也不願解除替身的「覺悟」後蛻變為冷酷的暗殺者。
+                  和布加拉提進行戰鬥並被打敗。在死亡之前，想帶著烏龜中的喬魯諾等人同歸於盡，這個行為激怒了布加拉提（原本布加拉提認同貝西有著「崇高的精神」，看到這幕後表示他「只是個墮落的卑鄙小人而已」）。
+                  被「鋼鍊手指」的能力在全身裝上拉鍊，身體四分五裂後被一旁的河水沖走部分軀體而死。
+                  其名字是義大利語的魚。</p>                   
+                  <h3>海灘男孩（ビーチ・ボーイ，Beach Boy）</h>
+                    <p>釣竿狀的替身。釣線和釣針能像通過水一樣通過除了目標外的物體，能入侵目標體內從內部撕裂目標的身體。
+                      一旦刺入目標體內，就能利用釣竿的彈性奪取目標的體力。因為連結了目標的神經，一旦對釣竿進行攻擊，能量便會隨著釣線反彈到對方身上。
+                      可以從刺入的部分得知目標的身體狀況。
+                      名稱的由來是美國搖滾樂隊海灘男孩。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 50%">C</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 70%">B</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 50%">C</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 50%">C</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 90%">A</div>
+              </div>
+          </div>
+
+          <div id="娃娃臉" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_20.png" width="155" height="285"> 
+                <img src="img/娃娃臉.jpg" width="185" height="285">
+              <h3>梅洛尼（メローネ，Melone）</h>
+                <p>暗殺小隊成員。口頭禪是「Di molto（非常）！」。會突然接近女性調查對方的健康狀況以及性方面的嗜好。
+                  用在列車上採取到的布加拉提的血液追蹤一行人，抓住了布加拉提和特莉休且一度令喬魯諾陷入瀕死狀態。
+                  在喬魯諾發覺自己「能修復破損肉體」的能力後被反敗為勝。替身「娃娃臉」被利用摩托車追蹤並擊破。梅洛尼本人也遭到喬魯諾用替身的殘骸製造的毒蛇咬死。
+                  其名字是義大利語的瓜。</p>
+                  <h3>娃娃臉（ベイビィ・フェイス，Baby Face）</h>
+                    <p>由從個人電腦長出手腳形成的控制器以及採取目標的血液分析遺傳因子後，以女性為媒介出生的「兒子」兩體構成的實體化替身。
+                      能力是把目標切割成許多碎塊，並重新組合成不同形狀。
+                      名稱的由來是美國巨星娃娃臉。</p>                    
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 70%">B</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 90%">A</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 100%">依教育程度</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 100%">依教育程度</div>
+              </div>
+          </div>
+
+          <div id="白色相簿" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_21.png" width="155" height="285"> 
+                <img src="img/白色相簿.jpg" width="185" height="285">
+              <h3>加丘（ギアッチョ，Ghiaccio）</h>
+                <p>暗殺小隊成員，性格暴躁，有著對自己夥伴及能力的強大自信。似乎是梅洛尼的朋友，十分信任梅洛尼。
+                  在與米斯達一戰時分析出對方想法，顯示了其理性及觀察力的一面。最終在米斯達的追擊和喬魯諾的攻擊下遭路燈分裂出來的尖刺刺穿後頸而亡。
+                  其名字是義大利語的冰。</p>                   
+                  <h3>白色相簿（ホワイト・アルバム，White Album）</h>
+                    <p>使周圍環境急速冷卻至超低溫，並將本體包覆在冰製外殼下。透過逼近絕對零度的溫度使物體停止運動，自己移動時會運用腳下的冰滑行，外型似太空服、有貓耳。
+                      名稱的由來是披頭四的專輯白色專輯。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="克里姆王" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_25.png" width="155" height="285"> 
+                <img src="img/bg_29.png" width="155" height="285">            
+                <img src="img/克里姆王.jpg" width="185" height="285">
+              <h3>迪亞波羅（ディアボロ，Diavolo）</h>
+                <p>黑手黨組織「熱情」的老闆，同時也是創立者。組織內部統稱「老闆」，自稱「帝王」，會用大量財富、權力、神秘和恐怖支配著整個組織，對於背叛者會進行殘忍的殺害。有著嚴重「多重人格障礙」，另外一人格是「威尼卡·托比歐」。
+                  個性極為謹慎，組織內部沒有任何人見過「老闆」的真面目，僅會交代信任的左右手來辦事。絕不允許任何威脅處於頂點的自己的存在，也為此企圖將可能對外透露出自身訊息的女兒特莉休除掉。
+                  於1967年出生，母親是女子監獄中的囚犯，父親則在兩年前病死。母親在生下自己後將其托給撒丁島的一名神父扶養，但在神父發現被埋在地下、奄奄一息的迪亞波羅之母時，迪亞波羅出手襲擊了神父並讓村莊在夜裡被大火吞噬。後來，他化名和一位來島上觀光的女性發生關係，藉此生下了特莉休。
+                  最後被喬魯諾的黃金體驗鎮魂曲攻擊，陷入不停重複死亡的狀況，並不得脫離。
+                  其名字是義大利語的惡魔。</p>
+              <h3>威尼卡·托比歐（ヴィネガー・ドッピオ，Vinegar Doppio）</h>
+                 <p>「老闆」的另一個人格，與主人格的迪亞波羅是主從關係，以為自己是「老闆」的心腹，但在暴露出其身為迪亞波羅的真面目後會立即由前者掌控身體，托比歐本身則不會記得迪亞波羅的任何事。
+                  相貌是個15歲左右的少年，平時心思有些纖細，但認真起來會十分強勢，只能操控「墓誌銘」的力量來預知未來，和使用克里姆王的雙腕進行攻擊。
+                  後期因為銀色戰車鎮魂曲的能力而轉移至布加拉提的身體，在起身時被米斯達槍擊倒地，最後傷重而死，死前仍期望迪亞波羅能再「打電話」給他。
+                  其名字取自義大利語的醋，姓氏則為義大利語的「雙重」之意。</p>                       
+                  <h3>克里姆王（キング・クリムゾン，King Crimson）</h>
+                    <p>特徵是頭部有著另外一張臉「墓誌銘（エピタフ，Epitaph）」；作品中多次提到是「無敵」的替身。因為可以預知未來，其行動也永遠不會有任何失誤。
+                      特殊能力是「時間刪除」，可以通過刪除時間得到許多效果，其每次發動最大影響範圍是「10秒」。並且無法連續發動。
+                      1.通過將除了自己以外的時間刪除得到只屬於自己的時間。在這段時間內所有的人和物都只能按照既定的目標進行行動無法對深紅之王任何行動進行反應與反抗。並且所有的行動都會被深紅之王預知。刪除結束後其他人都沒有這段時間內的記憶。
+                      迪亞波羅就是依賴這個能力在威尼斯在布加拉提完全無法察覺情況下打斷女兒的手後帶出電梯。
+                      2.刪除包括自己的時間，將自己在這個世界上將要發生的「過程」跳過，只留下「結果」。
+                      在和暗殺小隊隊長里蘇特・涅羅戰鬥中，被裡蘇特制住，無法行動。通過刪除子彈擊中自己的0.5秒的事實，使得子彈通過自己的身體，直接擊中了里蘇特。
+                      3.單獨發動頭部的「墓誌銘」可以在不發動時間刪除的前提下預知10秒內未來。預知的未來遠遠不及時間刪除過程中那麽完整，需要自己理解與觀察。發動的未來可以通過逃跑的方式避免發生，無法避免的情況下需要時間刪除能力進行干涉。
+                      缺點：
+                      1.發動後能力持續只有10秒，不能連續使用。如果被對手得知，反而會被對手利用。
+                      2.無法像「時間靜止」樣擁有絕對的控制力，如果對手要逃跑，在刪除的時間內也無法阻止。
+                      3.要在刪除的時間內攻擊對手，則無法保持無敵的狀態。雖然能完美預知，也是需要躲閃和防禦，被擊中的話也會受傷。如果保持無敵則無法攻擊和觸碰到對手。
+                      名稱來源是於1968年創立的英國搖滾樂團深紅之王，其另一能力「墓誌銘」則取自King Crimson的歌曲〈Epitaph〉。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 10%">E</div>
+
+              <p>動作精密性</p>
+                <div class="skills 無" style="width: 100%">?</div>
+
+              <p>成長性</p>
+                <div class="skills 無" style="width: 100%">?</div>
+              </div>
+          </div>
+
+          <div id="CRASH and 臉部特寫" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_22.png" width="155" height="285">      
+                <img src="img/CRASH.jpg" width="185" height="285">
+                <img src="img/臉部特寫.jpg" width="185" height="285">
+              <h3>史克亞羅（スクアーロ，Squalo）</h>
+                <p>與提查諾搭檔一同於威尼斯裡襲擊布加拉提小隊。最終於逃亡時遭納蘭迦發動替身射殺。
+                  其名字是義大利語的鯊魚。</p>
+              <h3>提查諾（ティッツァーノ，Tizziano）</h>
+                <p>與史克亞羅搭檔一同於威尼斯裡襲擊布加拉提小隊。將其替身附於納蘭迦身上。最終於逃亡時遭納蘭迦發動替身射殺。
+                  其名字取自義大利畫家提齊安諾·維伽略。</p>                   
+              <h3>衝擊（クラッシュ，Clash）</h3>
+
+              <p>遠距操縱型、鯊魚外型替身，能在任何水體或有水的地方（包括唾液）移動，進行攻擊或運送東西，但無法進入存於封閉空間的液體中，體型隨水面積而變。
+                名稱的由來是英國龐克樂團衝擊合唱團。</p> 
+
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 30%">D</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 70%">B</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 90%">A</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+
+              <h3>臉部特寫（トーキング・ヘッド，Talking Head）</h>
+              
+                <p>依附在人類舌頭上，使對方說出違心之論，若中招者想依靠其他方式，如寫字或比手畫腳等傳達原意，其文字也將會變的意義不明，行為也遭扭曲。寄生時可以稍微伸長舌頭抓住東西。
+                  名稱的由來是美國新浪潮樂團臉部特寫。</p>
+
+                <p>破壞力</p>
+                <div class="skills 破壞力" style="width: 10%">E</div>
+                
+                <p>速度</p>
+                  <div class="skills 速度" style="width: 10%">E</div>
+                
+                <p>射程距離</p>
+                  <div class="skills 射程距離" style="width: 70%">B</div>
+                
+                <p>持續力</p>
+                  <div class="skills 持續力" style="width: 90%">A</div>
+  
+                <p>動作精密性</p>
+                  <div class="skills 動作精密性" style="width: 10%">E</div>
+  
+                <p>成長性</p>
+                  <div class="skills 成長性" style="width: 10%">E</div>
+              </div>
+          </div>
+
+          <div id="惡名昭彰" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_24.png" width="155" height="285"> 
+                <img src="img/惡名昭彰.jpg" width="185" height="285">
+
+              <h3>卡爾涅（カルネ，Carne）</h>
+                <p>獨自在機場襲擊布加拉提小隊，在未發一言的情況下於機場被米斯達開槍打死，死後發動其替身。
+                  其名字是義大利語的肉。</p>                   
+                    <h3>聲名狼藉先生(惡名昭彰的B・I・G)（ノトーリアス・B・I・G，Notorious B.I.G.）</h>
+                <p>藉由本體死亡的怨念能源而現身的自動型替身，優先攻擊運動速度最快速的物體，吞噬目標的肉體與替身後成長自身體型。由於本體已死，所以無行動距離限制，也無法消滅。被特莉休擊落後墮入海中，不停追逐海浪和途徑船隻。
+                  名稱的由來是美國饒舌歌手聲名狼藉先生。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 無" style="width: 100%">unlimited</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 100%">unlimited</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 100%">unlimited</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 90%">A</div>
+              </div>
+          </div>
+
+          <div id="金屬製品" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_16.png" width="155" height="285"> 
+                <img src="img/金屬製品.jpg" width="185" height="285">
+              <h3>里蘇特·涅羅（リゾット・ネエロ，Risotto Nero）</h>
+                <p>暗殺小隊隊長，28歲，西西里島出身。18歲的時候，堂哥的兒子被一個喝酒的人開車撞死，無法原諒對方的里蘇特將對方殺死，從此投身黑幫的世界。
+                  在追蹤布加拉提小隊時遭遇了托比歐，因為對方看得見「史密斯飛船」，而認知到他是替身使者，向他發動攻擊。在死鬥的最後，被斬下一隻腳也沒有放棄追擊，因為托比歐的主人格迪亞波羅的計謀而被「史密斯飛船」攻擊，受到致命傷。雖然想要利用「史密斯飛船」和迪亞波羅同歸於盡，卻不敵「克里姆王」的能力獨自死在「史密斯飛船」的攻擊下。迪亞波羅對他的死表示敬意。
+                  其全名意為墨魚燉飯。</p>                   
+                  <h3>金屬製品（メタリカ，Metallica</h>
+                    <p>用磁力操作鐵份的群體型替身。非常的小、是存在於本體體內的稀有類型。
+                      能用磁力把敵方血液中的鐵份化為刀片、剪刀等鐵製品，在對方體內進行攻擊。受到攻擊的目標體內會大量出血，會因體內鐵分的減少而造成缺氧、變成無法行動的狀態。
+                      也能操作砂中的鐵份覆蓋在體表，形成類似保護色的作用容於周遭的風景中。是兼具攻擊性和隱密性，適合暗殺的替身。被切斷的身體部位，可以利用血液中的鐵份來接起。
+                      名稱的由來是美國的重金屬搖滾樂團金屬製品。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 50%">C</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 50%">C(5-10m)</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 50%">C</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="青春歲月" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_26.png" width="155" height="285"> 
+                <img src="img/青春歲月.jpg" width="185" height="285">
+              <h3>喬可拉特（チョコラータ，Cioccolata）</h>
+                <p>本為醫生，是個獵奇殺人狂。年少時以義工為名，於安老院折磨長者並迫使他們自殺。成為醫生後亦不斷製造醫療事故，目的是要觀察他們受折磨的苦況。在一次手術後因故意殺死病人而被解僱。後來加入組織，因手法殘忍而遭迪亞波羅鄙視和禁錮，於逼不得已情況下被其釋放並狙擊喬魯諾等人。最終遭喬魯諾利用米斯達的子彈擊敗及向其施以瘋狂連打，而被轟進垃圾車中陣亡。
+                  其名字是義大利語的巧克力（陰性名詞）。</p>                   
+                  <h3>青春歲月（グリーン・ディ，Green Day）</h>
+                    <p>人型，能力發動時，能力範圍內的生物只要由高處往低處移動，就會遭到黴菌侵襲，造成肉體毀壞。
+                      名稱的由來是美國龐克樂團年輕歲月。</p> 
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 50%">C</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 90%">A</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 90%">A</div>
+              </div>
+          </div>
+
+          <div id="綠洲" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_27.png" width="155" height="285"> 
+                <img src="img/綠洲.jpg" width="185" height="285">
+              <h3>賽可（セッコ，Secco）</h>
+                <p>喬可拉特當醫生時的神秘病患，口齒不清。與喬可拉特共同加入組織並搭檔，關係良好，喜歡吃方糖。在被布加拉提擊潰至走投無路之時挾持偽裝中的迪亞波羅，被鋼鍊手指擊穿後掉進垃圾車裡而死。
+                  其名字為義大利語的「乾燥」之意。</p>  
+                  <h3>綠洲（オアシス，Oasis）</h>
+                    <p>近距離威力型、全身套裝外型替身，可以將土地變成泥漿，任意穿梭追擊敵人。也能透過反彈地面增幅速度與力量。
+                      名稱的由來是英國搖滾樂團綠洲合唱團。</p>                       
+
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 90%">A</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 90%">A</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 70%">B</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 50%">C</div>
+              </div>
+          </div>
+
+          <div id="銀色戰車鎮魂曲" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_28.png" width="155" height="285"> 
+                <img src="img/銀色戰車鎮魂曲.jpg" width="185" height="285">
+              <h3>尚·皮耶爾·波魯納雷夫（ジャン・ピエール・ポルナレフ，Jean Pierre Polnareff）</h>
+                <p>《星塵鬥士》的主角群之一，在第三部的故事結束之後，追查箭的下落並與老闆戰鬥，因戰敗而下半身癱瘓。
+                  在故事終盤登場，當時36歲，與喬魯諾等人聯繫上，共同對抗老闆。雖然他在癱瘓後也具有卓越的戰鬥能力，卻仍不敵老闆，肉體被老闆殺死，靈魂因為自己的替身能力「銀色戰車安魂曲」被轉移至烏龜之中，也因烏龜的能力而讓靈魂保留在烏龜的體內，不被強制脫離。最終成為組織的參謀。</p>                   
+                  <h3>銀色戰車安魂曲（シルバーチャリオッツ・レクイエム，Silver Chariots Requiem）</h>
+                    <p>「箭」穿透波魯那雷夫的銀色戰車後所進化的新替身。由於替身進化時波魯那雷夫的肉體已死而成為無本體的替身。人型，能力是控制生物靈魂，將附近的生物彼此交換靈魂。</p>  
+              <p>破壞力</p>
+              <div class="skills 破壞力" style="width: 10%">E</div>
+              
+              <p>速度</p>
+                <div class="skills 速度" style="width: 10%">E</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 10%">E</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 10%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 成長性" style="width: 90%">A</div>
+              </div>
+          </div>
+
+          <div id="黃金體驗鎮魂曲" class="tabcontent">
+            <div class="card">
+              <img src="img/黃金體驗鎮魂曲.jpg" width="256" height="394"> 
+                
+              <h3>喬魯諾·喬巴拿（ジョルノ・ジョバァーナ，Giorno Giovanna）</h>
+                <h3>黃金體驗鎮魂曲（ゴールド・エクスペリエンス・レクイエム，Gold Experience Requiem）</h>
+                <p>在故事最終盤，黃金體驗進化為黃金體驗鎮魂曲，外型如同黃金體驗脫皮後的狀態，擁有系列作中堪稱無敵的能力。它能將包括攻擊在內、對手的所有行動歸零，並且消除掉事件的「結果」，而只留下「過程」，使得被命中的對手會一直重複過往的行動，而始終無法達到其目的，永遠地被困在不斷循環發生的「過程」中。</p>                   
+              <p>破壞力</p>
+              <div class="skills 無" style="width: 100%">?</div>
+              
+              <p>速度</p>
+                <div class="skills 無" style="width: 100%">?</div>
+              
+              <p>射程距離</p>
+                <div class="skills 無" style="width: 100%">?</div>
+              
+              <p>持續力</p>
+                <div class="skills 無" style="width: 100%">?</div>
+
+              <p>動作精密性</p>
+                <div class="skills 無" style="width: 100%">?</div>
+
+              <p>成長性</p>
+                <div class="skills 無" style="width: 100%">?</div>
+              </div>
+          </div>
+
+          <div id="滾石" class="tabcontent">
+            <div class="card">
+                <img src="img/bg_30.png" width="260" height="285"> 
+                <img src="img/滾石.jpg" width="185" height="285">
+              <h3>史可里皮（スコリッピ，Scolippi）</h>
+                <p>一名普通的雕刻家，認為所有人都是「命運的奴隸」。
+                  其名字取自義大利料理小牛肉片。</p>                   
+                  <h3>滾石（ローリング・ストーン，Rolling Stone）</h>
+                    <p>自動操作型，一顆外表與普通石頭無異的圓型大石頭，上面用漢字寫著「凶」。會變成「註定要死」之人死時的模樣，並自動追蹤該人，但不會展開攻擊。當那人碰到石頭時就會不受到任何痛苦地安樂死。
+                      名稱由來是英國搖滾樂團滾石樂隊。</p>  
+              <p>破壞力</p>
+              <div class="skills 無" style="width: 90%">無</div>
+              
+              <p>速度</p>
+                <div class="skills 無" style="width: 90%">無</div>
+              
+              <p>射程距離</p>
+                <div class="skills 射程距離" style="width: 90%">A</div>
+              
+              <p>持續力</p>
+                <div class="skills 持續力" style="width: 90%">A</div>
+
+              <p>動作精密性</p>
+                <div class="skills 動作精密性" style="width: 20%">E</div>
+
+              <p>成長性</p>
+                <div class="skills 無" style="width: 100%">無</div>
+              </div>
+          </div>
+      </div>
+
+       <div class="rightcolumn">
+        <div class="card">
+          <h2>ANIME</h2>
+          <a href="https://ani.gamer.com.tw/animeVideo.php?sn=12698" style="float:center"><img src="img/動畫瘋.jpg"></a>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+      </div>
+    </div>
+
+      
+    
+  
+  
+  
+
+            
+          
+          
+            
+            
+          
+    
+
+
+
+              <script>
+                  function openCity(cityName,elmnt,color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                      tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                      tablinks[i].style.backgroundColor = "";
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+                  
+                  }
+                  // Get the element with id="defaultOpen" and click on it
+                  document.getElementById("defaultOpen").click();
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+
+                  function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                  }
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+                  </script>
+
+   
+</body>
+</html>

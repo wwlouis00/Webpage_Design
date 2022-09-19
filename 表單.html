@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 自適應網頁設計</title>
+    <style>
+            * {
+              box-sizing: border-box;
+            }
+            .menu {
+              float:left;
+              width:20%;
+              text-align:center;
+            }
+            .menu a {
+              background-color:#e5e5e5;
+              padding:8px;
+              margin-top:7px;
+              display:block;
+              width:100%;
+              color:black;
+            }
+            .main {
+              float:left;
+              width:60%;
+              padding:0 20px;
+            }
+            .right {
+              background-color:#e5e5e5;
+              float:left;
+              width:20%;
+              padding:15px;
+              margin-top:7px;
+              text-align:center;
+            }
+            
+            @media only screen and (max-width:620px) {
+              /* For mobile phones: */
+              .menu, .main, .right {
+                width:100%;
+              }
+            }
+            </style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+  <h1>Hello World</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+       <a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%BD%B1%E8%A1%80%E8%84%88" target="_blank">第一部《幻影血脈》</a>
+       <a href="https://zh.wikipedia.org/wiki/%E6%88%B0%E9%AC%A5%E6%BD%AE%E6%B5%81" target="_blank">第二部《戰鬥潮流》</a>
+       <a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E5%A1%B5%E9%AC%A5%E5%A3%AB" target="_blank">第三部《星塵鬥士》</a>
+       <a href="https://zh.wikipedia.org/wiki/%E4%B8%8D%E6%BB%85%E9%91%BD%E7%9F%B3" target="_blank">第四部《不滅鑽石》</a>
+       <a href="https://zh.wikipedia.org/zh-tw/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8" target="_blank">第五部《黃金之風》</a>
+       <a href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E4%B9%8B%E6%B5%B7" target="_blank">第六部《石之海》</a>
+       <a href="https://zh.wikipedia.org/wiki/%E9%A3%86%E9%A6%AC%E9%87%8E%E9%83%8E" target="_blank">第七部《飆馬野郎》</a>
+       <a href="https://zh.wikipedia.org/wiki/JoJolion" target="_blank">第八部《JoJolion》連載中</a>
+  </div>
+
+  <div class="main">
+    <h2>Lorum Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  </div>
+
+  <div class="right">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+
+</body>
+</html>

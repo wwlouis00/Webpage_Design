@@ -1,0 +1,12 @@
+fname=${1:-'index.html'}
+nc -l localhost 8000 <<EOF
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.5.2
+Date: Thu, 19 Apr 2018 18:20:10 GMT
+Content-type: text/html
+Content-Length: $(wc -c <$fname)
+Last-Modified: Thu, 19 Apr 2018 18:18:43 GMT
+
+$(cat $fname)
+
+EOF

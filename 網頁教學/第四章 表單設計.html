@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <title>第四章 表單設計</title>
+<script>
+    function fnhelp()
+    {
+    alert("一生都學不會");
+    }
+    function fnChange()
+    {
+        document.getElementById("span_salary").innerText=
+        document.getElementById("txtSalary").value;
+    }
+    </script>
+    <link rel="stylesheet" href ="chapeter4表單設計.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>&quot;學習過程&quot;</h1>
+        <h2>4.3.1 單行文字欄位,密碼欄位與隱藏欄位</h2>
+        <form method="post" autocomplete="off">
+            帳號:<input type="text" name="txtuid" id= "txtuid"/><br/>
+            密碼:<input type="password" name="txtpwd" id= "txtpwd"/><br/>
+            姓名:<input type="text" name="txtname" id= "txtname"
+            value="王先生"/><br/>
+            <input type="hidden" name="txtbirthday" id= "txtbirthday"
+            value="89/01/21"/><br/>
+        </form>
+        <h2>4.3.2 提交 重設與一般按鈕</h2>
+        <form method="post" action="home/login" autocomplete="off">
+            帳號:<input type="text" name="txtuid" value= "Louis"/><br/>
+            密碼:<input type="password" name="txtpwd"/><br/>
+            <input type="submit" value= "提交"/>
+            <input type="reset" value= "重設"/>
+            <input type="button" value="說明" onclick= "fnhelp();"/>
+        </form>
+        <h2>4.3.3 電子信箱 網址 電話 搜尋與顏色欄位</h2>
+        <form method="post" action="home/login" autocomplete="off">
+            信箱:<input type="email" name="txteamil" /><br/>
+            官網:<input type="url" name="txturl"/><br/>
+            電話:<input type="tel" name="txttel" pattern="[0][9][0-9]{8}"><br/>
+            日期:<input type="date" name="txtdate"/><br/>
+            月份:<input type="month" name="txtmonth"/><br/>
+            週次:<input type="week" name="txtweek"/><br/>
+            時間:<input type="time" name="txttime"/><br/>
+            本地日期時間:<input type="datetime-local" name="txtdatetime-local"/><br/>
+            檔案上傳:<input type="file" name="txtfile"/><br/>
+            搜尋:<input type="search" name="txtsearch"/><br/>
+            顏色:<input type="color" name="txtcolor"/><br/>
+            <select>
+                <option>學習1</option>
+                <option>學習2</option>
+                <option>學習3</option>
+            </select>
+            <input type="submit" value="提交" />
+            <input type="reset" value= "重設"/>
+            <input type="button" value="說明" onclick= "fnhelp();"/>
+        </form>
+        <h2>4.3.4 數值資料欄位</h2>
+        <form>
+            人數:<input type="number" id="txtnumber"
+            value="1" step="1" max="10" min="1"/><br/>
+            薪資:<input type="range" id="txtSalary" onchange="fnChange();"
+            value="25000" step="1000" max="70000" min="22000"/>
+            <span id="span_salary">25000</span><br/>
+        </form>
+        <h2>4.3.5 日期時間欄位</h2>
+        日期:<input type="date" name="txtdate"/><br/>
+        時間:<input type="time" name="txttime"/><br/>
+        月份:<input type="month" name="txtmonth"/><br/>
+        週次:<input type="week" name="txtweek"/><br/>
+        本地日期時間:<input type="datetime-local" name="txtdatetime"/><br/>
+        </form>
+        <h2>4.3.6 檔案上傳欄位</h2>
+        <form enctype="multipart/form-data" method="POST"
+        accept="image/gif,image/jpeg" action="home/upload">
+        請選擇檔案<input type="file" name="txtfile" /><br/>
+        <input type="submit" value="檔案上傳"/>
+        </form>
+        <h2>4.3.7 選項鈕的使用</h2>
+        性別:<input type="radio" name="radgender" value="1" checked/>男
+             <input type="radio" name="radgender" value="0" />女<hr/>
+        學歷:<input type="radio" name="radedu" value="1"/>國小
+        <input type="radio" name="radedu" value="2" />國中
+        <input type="radio" name="radedu" value="3" />高中職
+        <input type="radio" name="radedu" value="4" checked/>大學
+        <input type="radio" name="radedu" value="5" />大學<hr/>
+        </form>
+        <h2>4.3.8 核取方塊欄位</h2>
+        <p>請問你覺得下列jojo裡哪位魔王最強?</p>
+        <input type="checkbox" name="chkname" value="kars" checked/>卡茲
+        <input type="checkbox" name="chkname" value="dio" checked/>迪奧
+        <input type="checkbox" name="chkname" value="Doppio" checked/>迪亞波羅
+        <input type="checkbox" name="chkname" value="pucci" checked/>普奇神父
+        <input type="checkbox" name="chkname" value="Valentine" checked/>瓦倫泰
+        </form>
+        <h2>4.3.9 核取方塊欄位</h2>
+        <fieldset>
+            <legend>魔王替身</legend>
+        <select name="selgender">
+            <option>石鬼面具</option>
+            <option>世界</option>
+            <option>深紅之王</option>
+            <option>天堂製造</option>
+            <option>D4C</option>
+        </select>
+        </fieldset>
+        <fieldset>
+        <legend>替身能力</legend>
+        <select name="selgender">
+            <option>無限時間</option>
+            <option>暫停時間</option>
+            <option>消除時間</option>
+            <option>加速時間</option>
+            <option>轉移空間</option>
+        </select>
+        <hr/>
+    </fieldset>
+        <h2>4.3.10 多行文字欄位</h2>
+       <form>
+        替身名:<input type="text" name="txtname"/><br/>
+        性別:<input type="radio" name="radgender" value="1" checked/>男
+             <input type="radio" name="radgender" value="0" />女<hr/>
+        訊息:<br/>
+        <textarea rows="5" cols="35" name="txtname" required>請填寫意見</textarea>
+        <input type="submit" value="提交" />
+            <input type="reset" value= "重設"/>
+            <input type="button" value="說明" onclick= "fnhelp();"/>
+        </form>
+
+<footer><i>泰山職業訓練場 &nbsp;&nbsp;
+124 新北市泰山區貴子里致遠新村
+<br>TEL: 09-6153-8919<br>
+copyright &copy; 2019 flag publishing co.,ltd. All Rights Reserved &nbsp;&nbsp;</i>
+</footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'PT Sans', sans-serif;
+  h2 {
+    color: #666;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-size: 20px;
+  }
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: none;
+  stroke-width: 1;
+  transform: translateZ(0);
+}
+
+svg {
+  transform: translateZ(0);
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = Math.max(1200, innerWidth),
+    height = Math.max(500, innerHeight);
+
+var i = 0;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+ 
+svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .on("touchmove", squares)
+    .on("mousemove", squares);
+
+function squares() {
+  var m = d3.mouse(this);
+
+  svg.insert("rect")
+      .attr("x", m[0]).attr("y", m[1])
+      .attr("width", 5).attr("height", 5)
+      .style("fill", d3.hsl((i = (i + 1) % 360), 10, .3))
+  		.style("stroke", "#444")
+      .style("stroke-opacity", 1)
+  		.attr('transform', "translate(0) rotate(0)")
+  		.style("fill-opacity", 0.8)
+    .transition()
+      .duration(1000)
+      .ease(Math.sqrt)
+      .attr("width", 100)
+  		.attr("height", 100)
+      .style("stroke-opacity", 0.5)
+  		.style("fill-opacity", 0)
+  		.attr('transform', "translate(30) rotate(5 -50 50)")
+      .remove();
+
+  d3.event.preventDefault();
+}
+
+</script>
